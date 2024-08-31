@@ -1,72 +1,50 @@
-package RevisionDay15;
+package Day14;
 
-/*
- * Assignment #2. Create TreeMap to store ChatMessages, both Key and Value are String Type. Store in descending order of names?
- */
-import java.util.Set;
-import java.util.TreeMap;
-
-class chtmsg{
-	
-	private String name;
-	private String msg;
-	public chtmsg(String name, String msg) {
-		super();
-		this.name = name;
-		this.msg = msg;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getMsg() {
-		return msg;
-	}
-	
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
-	@Override
-	public String toString() {
-		return "chtmsg [name=" + name + ", msg=" + msg + "]";
-	}
-	
-	
-	
-}
+import java.util.Comparator;
+import java.util.TreeSet;
 
 public class Assignment2 {
 	
-public static void main(String[]args) {
-		
 	/*
-	 * TreeMap<String,String> hmss=new TreeMap<>(
-	 * (c1,c2)->c1.getName().compareTo(c2.getMsg));
+	 * #2. Use TreeSet for above application, store Chat objects, and sort based on ascending order of Participant names.
 	 */
+	
+	public static void main(String[]args) {
 		
-		TreeMap<String,String> hmss=new TreeMap<>((c1, c2) -> c2.compareTo(c1));
-		/*(
-				(o1, o2)-> o1.getName().compareTo(o2.getName())
-				);*/
-		hmss.put("name1", "msg99");
-		hmss.put("name3", "msg199");
-		hmss.put("name2", "msg499");
-		hmss.put("name4", "msg299");
-		hmss.put("name5", "msg899");
+		TreeSet<String>cmsgs=new TreeSet<>(new RComparator());
 		
-		Set<String>ss=hmss.keySet();
+		cmsgs.add("P13 - D");
+		cmsgs.add("P2 - S");
+		cmsgs.add("P9 - d");
+		cmsgs.add("P8 - N");
+		cmsgs.add("P13 - e");
+		cmsgs.add("P5 - Y");
+		cmsgs.add("P8 - I");
+		cmsgs.add("P9 - completed");
 		
-		for(String item_key:ss) {
+		display(cmsgs);
+		
+	}
 			
-			System.out.println(item_key+"-->"+hmss.get(item_key));
-		}
+	static void display(TreeSet<String>ts) {	
+	for(String str:ts) {
+		
+		System.out.println(str);
 	}
 
-
+}
+}
+/*
+ * 1- implement comparator interface as class
+ * 2-anonymous inner class
+ * 3-lambda
+ */
+class RComparator implements Comparator<String>{
+	
+	@Override
+	public int compare(String s1,String s2) {
+		return s1.compareTo(s2);
+		
+	}
+	
 }
