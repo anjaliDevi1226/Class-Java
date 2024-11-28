@@ -1,0 +1,4 @@
+ECommerceApp.java : Anjali Devi
+Product.java + CartItem.java + product table creation: Gouri Vinod
+Inventoryclass.java + Inventory.java :Devika Anilkumar 
+ShoppingCart.java: Maneesha M Mani (remove from cart, checkout from cart) and Devika Mohan (view and add to cart)
