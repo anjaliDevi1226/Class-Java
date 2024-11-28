@@ -1,0 +1,8 @@
+Ecommerce Search and Buy Product API:
+Anjali Devi -Excel read data and write report to excel (ExcelReadUtils.Java,ExcelWriteUtils.Java)
+Devika- Api buy and search end point and testing (ProductApiTest.Java,ProductController.Java)
+Gouri- Search and Buy functionality(ProductService.Java,Product.Java,ProductRepository.Java)
+
+Seleinium:
+Maneesha M Mani-Search functionality and read from excel(ProductSearchTest.Java and ProductWithexcelTest.Java) 
+Devika Mohan - Write report to excel(ProjectJunitWithExcel.Java)
